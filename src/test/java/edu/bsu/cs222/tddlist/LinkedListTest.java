@@ -51,6 +51,20 @@ public class LinkedListTest {
         Assertions.assertEquals("b", result);
     }
 
+    @Test
+    public void testRemove_givenTwoElementsList_firstItemIsRemoved() {
+        givenAListContaining("a", "b");
+        String result = list.remove(0);
+        Assertions.assertEquals("a", result);
+    }
+
+    @Test
+    public void testRemove_givenTwoElementsList_sizeIsOne() {
+        givenAListContaining("a", "b");
+        String result = list.remove(0);
+        Assertions.assertEquals(1, list.size());
+    }
+
     private void givenAListContaining(String... elements) {
         for (String s : elements) {
             list.add(s);

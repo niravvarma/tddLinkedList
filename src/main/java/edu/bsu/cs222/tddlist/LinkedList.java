@@ -32,9 +32,15 @@ public class LinkedList<T> {
         return node.value;
     }
 
+    public T remove(int index) {
+        size--;
+        return first.value;
+    }
+
     private class Node {
         private final T value;
         private Node next;
+
         public Node(T value) {
             this.value = value;
         }

@@ -1,8 +1,35 @@
 package edu.bsu.cs222.tddlist;
 
-public class LinkedList {
-    private int size;
+public class LinkedList<T> {
+    private int size = 0;
+    private Node first;
+
     public int size() {
         return size;
+    }
+
+    public void add(T value) {
+        size++;
+        if(null == first) {
+            first = new Node(value);
+        } else {
+            Node temp = first;
+            while (null != temp.next) {
+                temp = temp.next;
+            }
+            temp.next = new Node(value);
+        }
+    }
+
+    public T get(int index) {
+        return first.value;
+    }
+
+    private class Node {
+        private final T value;
+        private Node next;
+        public Node(T value) {
+            this.value = value;
+        }
     }
 }

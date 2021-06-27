@@ -38,14 +38,21 @@ public class LinkedListTest {
     }
 
     @Test
-    public void testGet_oneElementList_addSecondElement(){
+    public void testGet_givenTwoElementsList_firstElementIsA() {
         givenAListContaining("a", "b");
         String result = list.get(0);
         Assertions.assertEquals("a", result);
     }
 
+    @Test
+    public void testGet_givenTwoElementsList_secondElementIsB() {
+        givenAListContaining("a", "b");
+        String result = list.get(1);
+        Assertions.assertEquals("b", result);
+    }
+
     private void givenAListContaining(String... elements) {
-        for (String s: elements) {
+        for (String s : elements) {
             list.add(s);
         }
     }

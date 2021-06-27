@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.bsu.cs222.tddlist.LinkedListTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-06-27T20:05:27" hostname="Nirav-MBP" time="0.031">
+  <properties/>
+  <testcase name="testRemove_givenTwoElementsList_sizeIsOne()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.022"/>
+  <testcase name="testSize_oneElementList_addSecondElement()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.001"/>
+  <testcase name="testRemove_givenTwoElementsList_firstItemIsRemoved()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.002"/>
+  <testcase name="testSize_oneElementList_sizeIsOne()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.001"/>
+  <testcase name="testGet_givenTwoElementsList_firstElementIsA()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.001"/>
+  <testcase name="testGet_oneElementList()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.001"/>
+  <testcase name="testGet_givenTwoElementsList_secondElementIsB()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.001"/>
+  <testcase name="testRemove_givenTwoElementsList_firstElementShouldBeB()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.0"/>
+  <testcase name="testSize_initialList_sizeIsZero()" classname="edu.bsu.cs222.tddlist.LinkedListTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

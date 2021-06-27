@@ -33,7 +33,7 @@ public class LinkedListTest {
 
     @Test
     public void testSize_oneElementList_addSecondElement(){
-        givenAListContaining("a", "b"); //given when then convention - GWT
+        givenAListContaining("a", "b");
         Assertions.assertEquals(2, list.size());
     }
 
@@ -60,9 +60,24 @@ public class LinkedListTest {
 
     @Test
     public void testRemove_givenTwoElementsList_sizeIsOne() {
-        givenAListContaining("a", "b");
-        String result = list.remove(0);
+        givenAListContaining("a", "b");  //given when then convention - GWT
+        whenTheFirstElementIsRemoved();
+        thenTheSizeIsOne();
+    }
+
+    private void thenTheSizeIsOne() {
         Assertions.assertEquals(1, list.size());
+    }
+
+    private void whenTheFirstElementIsRemoved() {
+        list.remove(0);
+    }
+
+    @Test
+    public void testRemove_givenTwoElementsList_firstElementShouldBeB() {
+        givenAListContaining("a", "b");
+        whenTheFirstElementIsRemoved();
+        Assertions.assertEquals("b", list.get(0));
     }
 
     private void givenAListContaining(String... elements) {

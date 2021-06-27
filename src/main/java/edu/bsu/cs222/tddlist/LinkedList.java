@@ -3,15 +3,20 @@ package edu.bsu.cs222.tddlist;
 import org.w3c.dom.Node;
 
 public class LinkedList<T> {
-    private int size = 0;
+
     private Node first;
 
     public int size() {
-        return size;
+        int count = 0;
+        Node node = first;
+        while (node != null) {
+            count++;
+            node = node.next;
+        }
+        return count;
     }
 
     public void add(T value) {
-        size++;
         if(null == first) {
             first = new Node(value);
         } else {
@@ -33,8 +38,19 @@ public class LinkedList<T> {
     }
 
     public T remove(int index) {
-        size--;
-        return first.value;
+        Node prev = null;
+        Node node = first;
+        while (index > 0) {
+            index--;
+            prev = node;
+            node = node.next;
+        }
+        if (null == prev) {
+            first = node.next;
+        } else {
+            prev.next = node.next;
+        }
+        return node.value;
     }
 
     private class Node {

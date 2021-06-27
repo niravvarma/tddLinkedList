@@ -1,5 +1,7 @@
 package edu.bsu.cs222.tddlist;
 
+import org.w3c.dom.Node;
+
 public class LinkedList<T> {
     private int size = 0;
     private Node first;
@@ -22,7 +24,12 @@ public class LinkedList<T> {
     }
 
     public T get(int index) {
-        return first.value;
+        Node node = first;
+        while (index > 0) {
+            index--;
+            node = node.next;
+        }
+        return node.value;
     }
 
     private class Node {

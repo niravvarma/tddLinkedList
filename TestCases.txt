@@ -1,0 +1,9 @@
+List is initially empty (size is zero)
+Add "a": size is 1
+Add "a": get(0) is a
+Add "b" to list containing "a": size is two
+Add "b" to list containing "a": get(0) is a
+Add "b" to list containing "a": get(1) is b
+Given list "a","b": remove(0), removed item is "a"
+Given list "a","b": remove(0), size is 1
+Given list "a","b": remove(0), get(0) is b
